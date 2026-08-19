@@ -1,0 +1,102 @@
+# =========================
+
+# Node modules (both folders)
+
+# =========================
+
+node_modules/
+evervice-frontend/node_modules/
+evervide-backend/node_modules/
+
+# =========================
+
+# Environment files (VERY IMPORTANT)
+
+# =========================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+evervice-frontend/.env
+evervide-backend/.env
+
+# =========================
+
+# Next.js build files
+
+# =========================
+
+.next/
+evervice-frontend/.next/
+out/
+
+# =========================
+
+# Build / dist
+
+# =========================
+
+build/
+dist/
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+logs/
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+
+# VS Code / Editor
+
+# =========================
+
+.vscode/
+
+# =========================
+
+# Cache
+
+# =========================
+
+.cache/
+.parcel-cache/
+
+# =========================
+
+# TypeScript
+
+# =========================
+
+*.tsbuildinfo
+
+# =========================
+
+# Coverage
+
+# =========================
+
+coverage/
+
+# =========================
+
+# Uploads (future use)
+
+# =========================
+
+uploads/

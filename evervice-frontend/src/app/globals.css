@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f1;
+  --foreground: #242424;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar in Beige Tones */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf7f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8dfd2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dcd0bf;
+}
+
+/* Editorial Glass Panel (Light Cream Solid Overlay) */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e8dfd2;
+}
+
+/* Editorial Service/UI Cards with Lift Transition */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e8dfd2;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: #ffffff;
+  border-color: #c99a24;
+  box-shadow: 0 12px 30px -10px rgba(107, 98, 88, 0.12);
+  transform: translateY(-4px);
+}
+
+/* Luxury Input Styling with Smooth Focus Ring */
+.glass-input {
+  background: #ffffff;
+  border: 1px solid #e8dfd2;
+  color: #242424;
+  font-family: var(--font-sans);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-input:focus {
+  border-color: #c99a24;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(201, 154, 36, 0.12);
+  outline: none;
+}
+
+/* Gold Text Gradient Accent */
+.text-gradient {
+  background: linear-gradient(135deg, #a87d18 0%, #c99a24 50%, #e8be56 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #a87d18 0%, #c99a24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-glow {
+  text-shadow: 0 0 30px rgba(201, 154, 36, 0.05);
+}
+
+/* Smooth Premium Underline for Links */
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c99a24;
+  transform-origin: bottom right;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Page / Image Entrance Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Button Pulse/Scale Highlights */
+.btn-premium {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-premium:hover {
+  transform: scale(1.02);
+  filter: brightness(1.04);
+}
+
+.btn-premium:active {
+  transform: scale(0.98);
+}
